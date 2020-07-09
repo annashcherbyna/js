@@ -148,7 +148,7 @@ for(let i = 0;i<arr7.length;i++){
 }
 console.log(slovo);
 //- Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
-let i = 0;
+i = 0;
 slovo ='';
 while(i<arr7.length){
     slovo = slovo+ arr7[i];
