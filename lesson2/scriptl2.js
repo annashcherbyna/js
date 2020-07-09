@@ -175,10 +175,13 @@ arr7.push(3);
 console.log(arr7);
 
 //- Дан масив [1, 2, 3]. Зробіть з нього новий масив [3, 2, 1].
+console.log('Дан масив [1, 2, 3]. Зробіть з нього новий масив [3, 2, 1].');
 let arr8 = [1,2,3];
-let temp = arr8[0];
-arr8[0] = arr8[2];
-arr8[2] = temp;
+for(let i = 0,j = arr8.length-1;i<arr8.length && i<j;i++,j--){
+	let temp = arr8[i];
+	arr8[i] = arr8[j];
+	arr8[j] = temp;
+}
 console.log(arr8);
 //- Дан масив [1, 2, 3]. Додайте йому в кінець елементи 4, 5, 6.
 let arr9 = [1,2,3];
