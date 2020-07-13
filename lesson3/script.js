@@ -17,7 +17,7 @@ let objPerson ={
     name: 'Vasia',
     age: 30,
     children:[{name: 'bob'},{name:'charly'}],
-    height: 99,
+    weight: 99,
     education: 'higher'
 }
 
@@ -50,12 +50,171 @@ let flat = {
 // - 3 5 людей
 // - з 5 автомобілів
 
+let arrDog = [];
+let objDog1 = {
+    age: 2,
+    name: 'Kate',
+    weight: 7,
+    children:[{name: 'nelly'}],
+    breed: 'dog'
+};
+let objDog2 = {
+    age: 6,
+    name: 'Lusia',
+    weight: 2,
+    children:[{name: 'puppy'}],
+    breed: 'chau-chau'
+};
+let objDog3 = {
+    age: 10,
+    name: 'Lory',
+    weight: 12,
+    children:[],
+    breed: 'serbernar'
+};
+let objDog4 = {
+    age: 7,
+    name: 'Molly',
+    weight: 6,
+    children:[{name: 'joi'},{name: 'kia'}],
+    breed: 'ovcharka'
+};
+arrDog.push(objDog);
+arrDog.push(objDog1);
+arrDog.push(objDog2);
+arrDog.push(objDog3);
+arrDog.push(objDog4);
+
+console.log(arrDog);
+
+let arrPerson =[
+    {
+        name: 'Vasia',
+        age: 30,
+        children:[{name: 'bob'},{name:'charly'}],
+        weight: 99,
+        education: 'higher'
+    },{
+        name: 'Lesia',
+        age: 5,
+        children:[],
+        weight: 20,
+        education: null
+    },{
+        name: 'Masha',
+        age: 25,
+        children:[{name: 'Olia'}],
+        weight: 55,
+        education: 'higher'
+    },{
+        name: 'Oleg',
+        age: 18,
+        children:[],
+        weight: 50,
+        education: 'middle'
+    },{
+        name: 'Mila',
+        age: 23,
+        children:[],
+        weight: 56,
+        education: 'higher'
+    }
+];
+console.log(arrPerson);
+
+let arrCar = [
+    {
+        model: 'Mazda',
+        age: 5,
+        color: 'red',
+        type: 'sedan',
+        engine: 2
+    },{
+        model: 'Opel',
+        age: 15,
+        color: 'blue',
+        type: 'sedan',
+        engine: 1.8
+    },{
+        model: 'BMW',
+        age: 1,
+        color: 'black',
+        type: 'sedan',
+        engine: 2.5
+    },{
+        model: 'Seat',
+        age: 4,
+        color: 'red',
+        type: 'universal',
+        engine: 1.6
+    },{
+        model: 'Kia',
+        age: 7,
+        color: 'orange',
+        type: 'hach-back',
+        engine: 2
+    }
+];
+console.log(arrCar);
 // -- створити об'єкт (не меньше 5ти властивостей) який описує, одна з властивостей обов'язково повинна бути об'єктом,ще одна - масивом
 // - будинок
 // - водій
 // - іграшку
 // - стіл
 // - сумка
+let house = {
+    floor:3,
+    address:{city:'Dnipro',street: 'Peremogy',num: 153},
+    rooms:6,
+    square:350,
+    dop:['garage','garden']
+}
+console.log(house);
+let driver = {
+    name: 'Sergey',
+    class:['A','B','C'],
+    car: {
+        model: 'Kia',
+        age: 7,
+        color: 'orange',
+        type: 'hach-back',
+        engine: 2
+    },
+    age: 52,
+    timeempl:6
+}
+console.log(driver);
+
+let toy ={
+    foAge: [2,3,4,5],
+    type: 'constructor',
+    name: 'lego',
+    elements: {figure:5,blocks: 30},
+    collection: 'Betman'
+}
+console.log(toy);
+
+let table = {
+    use: ['kitchen','dinnerroom'],
+    height: 100,
+    width:120,
+    length: 200,
+    components:{
+        legs:4,
+        base: 1,
+        screw: 20
+    }
+}
+console.log(table);
+
+let bag = {
+    height: 35,
+    width:20,
+    deep:8,
+    color: ['red','orange','black'],
+    pocket: {color:'red',cnt: 3}
+}
+console.log(bag);
 // Дан массив:
 let users = [
 				{name: 'vasya', age: 31, status: false},
