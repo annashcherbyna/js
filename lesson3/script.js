@@ -21,6 +21,30 @@ let objPerson ={
     education: 'higher'
 }
 
+let objCar = {
+    model: 'Mazda',
+    age: 5,
+    color: 'red',
+    type: 'sedan',
+    engine: 2
+}
+
+let flat = {
+    floor: 5,
+    address: 'Peremogy,60',
+    square: 50,
+    price: 10000,
+    cntRoom: 3
+}
+
+ let book = {
+     name : 'Alise in Wonderland',
+     author : 'Lewis Karroll',
+     style : 'novel',
+     year : '1865',
+     mainCharacters:['Alise','The White Rabbit','The Queen of Hearts','The Cheshire Cat','The Mad Hatter']
+ }
+
 // -- Створити масив та вивести його в консоль:
 // - з 5 собак
 // - 3 5 людей
@@ -32,9 +56,6 @@ let objPerson ={
 // - іграшку
 // - стіл
 // - сумка
-
-
-
 // Дан массив:
 let users = [
 				{name: 'vasya', age: 31, status: false},
