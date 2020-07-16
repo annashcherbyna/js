@@ -317,13 +317,13 @@ class Car2{
         this.model = model;
         this.produser = produser;
         this.year = year;
-        this.speed = speed;
+        this.speed = peed;
         this.engine = engine;
-    }
-    drive= function () {
-        console.log(`їдемо зі швидкістю ${this.speed} на годину`);
     };
-    info = function(){
+    drive() {
+        console.log(`їдемо зі швидкістю ${this.speed} на годину`);
+    }
+    info(){
         console.log('Car:');
         for (const key in this) {
             if (this.hasOwnProperty(key) && typeof this[key] !== 'function') {
@@ -335,14 +335,14 @@ class Car2{
                 }
             }
         }
-    };
-    increaseMaxSpeed = function(newSpeed){
+    }
+    increaseMaxSpeed(newSpeed){
         this.speed += newSpeed;
-    };
-    changeYear = function(newValue){
+    }
+    changeYear(newValue){
         this.year = newValue;
-    };
-    addDriver = function(driver){
+    }
+    addDriver(driver){
         this.driver = driver;
     }
 }
@@ -363,7 +363,40 @@ C2.info();
 // --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 // -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
 // ==============================================
+class Cinderella {
+    constructor(name,age,sizefoot){
+        this.name = name;
+        this.age = age;
+        this.sizefoot = sizefoot;
+    }
+}
 
+let arrCinderellas = [];
+arrCinderellas.push(new Cinderella('Alisa',18,37));
+arrCinderellas.push(new Cinderella('Misha',22,39));
+arrCinderellas.push(new Cinderella('Masha',16,36));
+arrCinderellas.push(new Cinderella('Dasha',7,30));
+arrCinderellas.push(new Cinderella('Anika',10,32));
+arrCinderellas.push(new Cinderella('Katia',19,38));
+arrCinderellas.push(new Cinderella('Sveta',33,35));
+arrCinderellas.push(new Cinderella('Monika',35,40));
+arrCinderellas.push(new Cinderella('Kristina',17,37));
+arrCinderellas.push(new Cinderella('Asia',24,41));
+
+class Prince{
+    constructor(name,age,sizeshoe){
+        this.name = name;
+        this.age = age;
+        this.sizeshoe = sizeshoe;
+    }
+}
+let PrinceRomire = new Prince('Romire',40,38);
+
+for (const val of arrCinderellas) {
+    if(PrinceRomire.sizeshoe === val.sizefoot){
+        console.log(`Cinderella: ${val.name}`)
+    }
+}
 
 
 // ==============================================
@@ -372,3 +405,37 @@ C2.info();
 // --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
 // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
 // ==============================================
+
+function Cinderella1(name,age,sizefoot) {
+        this.name = name;
+        this.age = age;
+        this.sizefoot = sizefoot;
+}
+
+let arrCinderellas1 = [];
+arrCinderellas1.push(new Cinderella1('Alisa',18,37));
+arrCinderellas1.push(new Cinderella1('Misha',22,39));
+arrCinderellas1.push(new Cinderella1('Masha',16,36));
+arrCinderellas1.push(new Cinderella1('Dasha',7,30));
+arrCinderellas1.push(new Cinderella1('Anika',10,32));
+arrCinderellas1.push(new Cinderella1('Katia',19,38));
+arrCinderellas1.push(new Cinderella1('Sveta',33,35));
+arrCinderellas1.push(new Cinderella1('Monika',35,40));
+arrCinderellas1.push(new Cinderella1('Kristina',17,37));
+arrCinderellas1.push(new Cinderella1('Asia',24,41));
+
+function Prince1(name,age,sizeshoe) {
+        this.name = name;
+        this.age = age;
+        this.sizeshoe = sizeshoe;
+        this.findCinderella = function(arrCinderellas){
+            for (const val of arrCinderellas) {
+                if(this.sizeshoe === val.sizefoot){
+                    console.log(`Cinderella: ${val.name}`)
+                }
+            }
+        }
+}
+let PrinceRomire1 = new Prince1('Romire',40,38);
+PrinceRomire1.findCinderella(arrCinderellas1);
+
