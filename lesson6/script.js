@@ -212,6 +212,77 @@ let usersWithAddress = [{id: 1, name: 'vasya', age: 31, status: false, address: 
 // -- отфильтровать (оставить) тех у кого отрицательный статус и младше 30 лет
 // -- отфильтровать (оставить) тех у кого номер дома четный
 
+let logA = (arr)=> {
+    arr.forEach(element => {
+        console.log(element);
+    });
+}
+
+console.log(usersWithAddress[0]);
+usersWithAddress.sort(function(a,b){
+    return a.id > b.id;
+});
+console.log(usersWithAddress[0]);
+
+usersWithAddress.sort(function(a,b){
+    return a.id < b.id;
+});
+console.log(usersWithAddress[0]);
+
+usersWithAddress.sort(function(a,b){
+    return a.age > b.age;
+});
+logA(usersWithAddress);
+
+usersWithAddress.sort(function(a,b){
+    return a.age < b.age;
+});
+logA(usersWithAddress);
+
+usersWithAddress.sort(function(a,b){
+    return a.name > b.name;
+});
+logA(usersWithAddress);
+
+usersWithAddress.sort(function(a,b){
+    return a.name < b.name;
+});
+logA(usersWithAddress);
+
+console.log('sort by number');
+usersWithAddress.sort(function(a,b){
+    return a.address.number > b.address.number;
+});
+logA(usersWithAddress);
+
+console.log('sort by number');
+usersWithAddress.sort(function(a,b){
+    return a.address.street > b.address.street;
+});
+logA(usersWithAddress);
+
+
+console.log('age < 30');
+let arr1 = usersWithAddress.filter((val)=>{
+    return val.age < 30;
+})
+logA(arr1);
+
+console.log('!val.status');
+let arr2 = usersWithAddress.filter((val)=>{
+    return !val.status;
+})
+logA(arr2);
+
+console.log('age < 30  && !val.status');
+let arr3 = usersWithAddress.filter((val)=>{
+    return val.age < 30 && !val.status;
+})
+logA(arr3);
+
+console.log('%2');
+let arr4 = usersWithAddress.filter(val => !(val.address.number % 2));
+logA(arr4);
 
 // ===========================
 // ======ДОПОЛНИТЕЛЬНО========
@@ -229,6 +300,15 @@ let usersWithAddress = [{id: 1, name: 'vasya', age: 31, status: false, address: 
 // Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25, то необідно відправити його на курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.
 // Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі
 
+
+
+let car1 = {id: 1, name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}}, 
+{id: 2, name: 'petya', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 1}}, 
+{id: 3, name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}}, 
+{id: 4, name: 'olya', age: 28, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 90}}, 
+{id: 5, name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}}, 
+{id: 6, name: 'anya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}}, 
+{id: 7, name: 'oleg', age: 28, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 22}}, 
 
 // Задача: дан отсортированный по возрастанию массив целых чисел. Необходимо вернуть наименьший и наибольший индекс заданного элемента.
 // Входные данные: arr — массив целых чисел значения которых по модулю не больше 10. Размер массива не более 10 элементов.
